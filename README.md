@@ -108,6 +108,17 @@ Follow these steps to get started:
   - Ensure **Docker** is installed ([Get Docker](https://docs.docker.com/get-started/get-docker/))  
   - Start Docker before running AutoGen-based agents  
 
+---
+### **3️⃣ Import Saga Library**
+(Optional) You can execute transaction using sage:  
+
+
+  ```
+  cd applications
+  ```
+
+and edit the "multiagent-p5.py" following the below coding format.
+
 --- 
 ## **Example 1: Wedding Logsitics Planning**
 
