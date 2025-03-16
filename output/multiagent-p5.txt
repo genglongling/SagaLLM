@@ -1,0 +1,251 @@
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ Utils imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ utils.logging imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ tool_agent.tool imported successfully!
+✅ utils.completions imported successfully!
+✅ utils.extraction imported successfully!
+✅ multi_agent.crew imported successfully!
+✅ planning_agent.react_agent imported successfully!
+✅ tool_agent.tool imported successfully!
+✅ Saga imported successfully!
+✅ Agent imported successfully!
+
+==================================================
+🛠 Transaction Manager: Agents and dependencies initialized.
+==================================================
+
+
+==================================================
+🚀 Running Agent: Locations and Time Setup Agent
+==================================================
+
+✅ Locations and Time Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Task Setup Agent
+==================================================
+
+✅ Task Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Resource Management Agent
+==================================================
+
+✅ Resource Management Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Constraint Validation Agent
+==================================================
+
+✅ Constraint Validation Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Wedding Event Oversight Agent
+==================================================
+
+✅ Wedding Event Oversight Agent completed successfully.
+
+📌 **Intra-Agent Execution Details**
+🔹 Locations and Time Setup Agent: <locations>
+  <location id="B" name="Boston Airport"/>
+  <location id="G" name="Gift shop"/>
+  <location id="T" name="Tailor shop"/>
+  <location id="W" name="Wedding venue"/>
+</locations>
+
+<travel_times>
+  <from to="G" time="45">B</from>
+  <from to="T" time="30">B</from>
+  <from to="W" time="40">B</from>
+  <from to="T" time="20">G</from>
+  <from to="W" time="25">G</from>
+  <from to="W" time="15">T</from>
+</travel_times>
+
+<guest_arrivals>
+  <guest name="Alex" location="B" time="11:00 AM" from="Chicago" needs_ride="yes"/>
+  <guest name="Jamie" location="B" time="12:30 PM" from="Atlanta" needs_ride="yes"/>
+  <guest name="Pat" location="W" time="12:00 PM" from="NYC" has_car="5-seater"/>
+</guest_arrivals>
+🔹 Task Setup Agent: To create an optimized task schedule aligned with the given constraints, the tasks should be arranged as follows:
+
+1. **Clothes Pickup**: Schedule this task before 2:00 PM. It's important to complete this task early to ensure there is enough time for any unforeseen delays and to have the clothes ready for the photo session.
+
+2. **Gift Collection**: Schedule this task after 12:00 PM. This allows flexibility to complete it after the clothes pickup and before the photo session, ensuring all tasks are completed efficiently.
+
+3. **Photo Session**: Schedule this task at 3:00 PM as specified. This is a fixed time and should be adhered to precisely.
+
+**Optimized Task Schedule:**
+
+- 11:00 AM - 1:30 PM: Clothes Pickup
+- 1:30 PM - 2:30 PM: Gift Collection
+- 3:00 PM: Photo Session
+
+This schedule ensures all tasks are completed within their respective time constraints and allows for a smooth flow of activities leading up to the photo session.
+🔹 Resource Management Agent: Optimized 5 vehicle allocation and friend welcome ensuring timely arrivals. - Onecar (5-seater) with Pat, available after he is Boston - Local friend Chris (5-seater) available after 1:30 PM at 𝑊
+🔹 Constraint Validation Agent: To ensure that all tasks are completed within the specified operating hours and vehicle constraints, we need to create a schedule that adheres to the following conditions:
+
+1. **Operating Hours:**
+   - All tasks must be completed before 3:00 PM.
+   - The gift store opens at 12:00 PM.
+   - The tailor closes at 2:00 PM.
+
+2. **Vehicle Constraints:**
+   - Two cars are available to accommodate all transport needs.
+
+**Validated Schedule:**
+
+- **Task 1: Visit Tailor**
+  - **Start Time:** 10:00 AM
+  - **End Time:** 11:00 AM
+  - **Notes:** Ensure this task is completed before the tailor closes at 2:00 PM.
+
+- **Task 2: Visit Gift Store**
+  - **Start Time:** 12:00 PM
+  - **End Time:** 1:00 PM
+  - **Notes:** This task must start no earlier than 12:00 PM when the gift store opens.
+
+- **Task 3: Photo Session**
+  - **Start Time:** 1:30 PM
+  - **End Time:** 2:30 PM
+  - **Notes:** Ensure this task is completed before 3:00 PM.
+
+**Vehicle Allocation:**
+
+- **Car 1:**
+  - Transport for Task 1 (Visit Tailor) and Task 3 (Photo Session).
+
+- **Car 2:**
+  - Transport for Task 2 (Visit Gift Store).
+
+This schedule ensures that all tasks are completed within the operating hours, and the two cars are used efficiently to accommodate all transport needs without any conflicts.
+🔹 Wedding Event Oversight Agent: To ensure a smooth execution of the wedding logistics, here's a detailed wedding scheduling plan that outlines the tasks, responsible people, and timing:
+
+**Wedding Day Schedule:**
+
+**Morning Preparations:**
+
+- **6:00 AM - 7:00 AM: Hair and Makeup for Bride and Bridesmaids**
+  - **Responsible:** Hair and Makeup Artists
+  - **Location:** Bridal Suite
+
+- **7:00 AM - 8:00 AM: Groom and Groomsmen Getting Ready**
+  - **Responsible:** Groom and Groomsmen
+  - **Location:** Groom's Suite
+
+- **8:00 AM - 9:00 AM: Final Touches and Photos**
+  - **Responsible:** Photographer
+  - **Location:** Various locations around the venue
+
+**Ceremony:**
+
+- **10:00 AM - 10:30 AM: Guest Arrival and Seating**
+  - **Responsible:** Ushers
+  - **Location:** Ceremony Venue
+
+- **10:30 AM - 11:00 AM: Wedding Ceremony**
+  - **Responsible:** Officiant
+  - **Location:** Ceremony Venue
+
+**Post-Ceremony:**
+
+- **11:00 AM - 11:30 AM: Family and Group Photos**
+  - **Responsible:** Photographer
+  - **Location:** Ceremony Venue
+
+- **11:30 AM - 12:00 PM: Cocktail Hour**
+  - **Responsible:** Catering Staff
+  - **Location:** Reception Area
+
+**Reception:**
+
+- **12:00 PM - 12:30 PM: Guests Seated for Reception**
+  - **Responsible:** Ushers
+  - **Location:** Reception Hall
+
+- **12:30 PM - 1:00 PM: Wedding Party Entrance and First Dance**
+  - **Responsible:** DJ/Band
+  - **Location:** Reception Hall
+
+- **1:00 PM - 2:00 PM: Lunch/Dinner Service**
+  - **Responsible:** Catering Staff
+  - **Location:** Reception Hall
+
+- **2:00 PM - 2:30 PM: Speeches and Toasts**
+  - **Responsible:** Best Man, Maid of Honor, Parents
+  - **Location:** Reception Hall
+
+- **2:30 PM - 3:00 PM: Cake Cutting Ceremony**
+  - **Responsible:** Bride and Groom
+  - **Location:** Reception Hall
+
+- **3:00 PM - 4:00 PM: Dancing and Entertainment**
+  - **Responsible:** DJ/Band
+  - **Location:** Reception Hall
+
+**Evening:**
+
+- **4:00 PM - 5:00 PM: Bouquet and Garter Toss**
+  - **Responsible:** Bride and Groom
+  - **Location:** Reception Hall
+
+- **5:00 PM - 6:00 PM: Farewell and Guest Departure**
+  - **Responsible:** Wedding Planner
+  - **Location:** Venue Exit
+
+**Post-Wedding:**
+
+- **6:00 PM - 7:00 PM: Clean-Up and Vendor Pack-Up**
+  - **Responsible:** Venue Staff and Vendors
+  - **Location:** Entire Venue
+
+This schedule ensures that all tasks are assigned to the appropriate people and are completed on time, allowing for a seamless and enjoyable wedding day.
+
+🔗 **Inter-Agent Dependencies**
+🔸 Locations and Time Setup Agent depends on: None
+🔸 Task Setup Agent depends on: None
+🔸 Resource Management Agent depends on: None
+🔸 Constraint Validation Agent depends on: None
+🔸 Wedding Event Oversight Agent depends on: None
+
+🎯 **Context for Resource Management Agent:**
+Optimized 5 vehicle allocation and friend welcome ensuring timely arrivals. - Onecar (5-seater) with Pat, available after he is Boston - Local friend Chris (5-seater) available after 1:30 PM at 𝑊
+🔄 Rolling back Resource Management Agent's operation...
+🔄 Resource Management Agent rolled back successfully.
