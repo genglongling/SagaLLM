@@ -27,7 +27,14 @@ The SagaLLM provides a **comprehensive middleware** for agent application layer 
    - **LangGraph**  
 
 ---
-## **Key Functions of Saga Framework**  
+## **Key Functions of `Saga` libraries**
+
+- 1) Context Management Framework
+- 2) Validation Framework
+- 3) Transaction Framework
+- 4) Extension of multi-agent frameworks,
+- 5) Built for application layers.
+     
 
 | **Function**            | **Description**                                      | **Function Name**                      | **Input**                                      |
 |-------------------------|------------------------------------------------------|-----------------------------------------|------------------------------------------------|
@@ -38,6 +45,7 @@ The SagaLLM provides a **comprehensive middleware** for agent application layer 
 | **Select Context**      | Allows user to query execution context of a node.   | `select_context(self, node_name)`       | User-input node name.                         |
 | **Restore Context**     | Rolls back execution of a specified agent.          | `restore_context(self, agent_name)`     | User-input agent to rollback.                |
 
+![SagaLLM Functions](img/saga_functions.png)
 ---
 
 ## **🔹 Key Features of Using `SagaCoordinator` Instead of Previous `Crew`**
@@ -50,15 +58,6 @@ The SagaLLM provides a **comprehensive middleware** for agent application layer 
 | **Use Case**        | Dependency management                     | Resilient transaction flow          |
 
 ---
-## **Key Functions of `Saga` libraries**
-
-- 1) Context Management Framework
-- 2) Validation Framework
-- 3) Transaction Framework
-- 4) Extension of multi-agent frameworks,
-- 5) Built for application layers.
-     
-![SagaLLM Functions](img/saga_functions.png)
 
 ## **🚀 How To Run**  
 
