@@ -795,7 +795,7 @@ Structured schedule ensuring all members arrive on time for dinner.
 ## ✅ Final Thoughts
 
 - If everything **succeeds**, all agents complete. ✅ 
-- If any **agent fails**, all completed agents **roll back automatically**.  ✅ 
+- If any **agent fails**, all completed agents **roll back automatically, or by specifying a specific node**.  ✅ 
 - Ensures **multi-agent consistency** in real-world applications (e.g., **stock trading, planning, scheduling, transaction, or payments**).  ✅ 
 
 ---
