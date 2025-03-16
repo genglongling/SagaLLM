@@ -1,8 +1,40 @@
 from textwrap import dedent
 
-from src.multi_agent.crew import Crew
-from src.planning_agent.react_agent import ReactAgent
-from src.tool_agent.tool import Tool
+import sys
+import os
+
+# # Get the project root by going up one level from 'applications'
+# project_root = os.path.abspath(os.path.join(os.getcwd(), '..'))
+# print(f"📂 Project Root: {project_root}")
+#
+# # Append 'src' directory to sys.path
+# src_path = os.path.join(project_root, 'src')
+# sys.path.append(src_path)
+#
+# # Print sys.path to verify
+# print("🔍 Updated sys.path:")
+# for path in sys.path:
+#     print(path)
+
+from multi_agent.crew import Crew
+from planning_agent.react_agent import ReactAgent
+from tool_agent.tool import Tool
+
+print("✅ multi_agent.crew imported successfully!")
+print("✅ planning_agent.react_agent imported successfully!")
+print("✅ tool_agent.tool imported successfully!")
+
+# # Try importing Saga again
+# try:
+#     from multi_agent.crew import Crew
+#     from planning_agent.react_agent import ReactAgent
+#     from tool_agent.tool import Tool
+#
+#     print("✅ multi_agent.crew imported successfully!")
+#     print("✅ planning_agent.react_agent imported successfully!")
+#     print("✅ tool_agent.tool imported successfully!")
+# except ModuleNotFoundError as e:
+#     print("❌ Import failed:", e)
 
 
 class Agent:

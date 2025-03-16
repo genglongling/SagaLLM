@@ -1,0 +1,228 @@
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ Utils imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ utils.logging imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ tool_agent.tool imported successfully!
+✅ utils.completions imported successfully!
+✅ utils.extraction imported successfully!
+✅ multi_agent.crew imported successfully!
+✅ planning_agent.react_agent imported successfully!
+✅ tool_agent.tool imported successfully!
+✅ Saga imported successfully!
+✅ Agent imported successfully!
+
+==================================================
+🛠 Transaction Manager: Agents and dependencies initialized.
+==================================================
+
+Traceback (most recent call last):
+  File "/Users/glin/Documents/GitHub/SagaLLM/applications/multiagent-p6.py", line 71, in <module>
+    saga.saga_coordinator(with_rollback=True)
+  File "/Users/glin/Documents/GitHub/SagaLLM/src/multi_agent/saga.py", line 61, in saga_coordinator
+    sorted_agents = self.topological_sort()
+  File "/Users/glin/Documents/GitHub/SagaLLM/src/multi_agent/saga.py", line 144, in topological_sort
+    in_degree[dependent] -= 1
+KeyError: Constraint Validation Agent
+(venv) (base) glin@glindeMacBook-Pro applications % python3 multiagent-p6.py
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ Utils imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ utils.logging imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+/Users/glin/Documents/GitHub/SagaLLM/src
+✅ tool_agent.tool imported successfully!
+✅ utils.completions imported successfully!
+✅ utils.extraction imported successfully!
+✅ multi_agent.crew imported successfully!
+✅ planning_agent.react_agent imported successfully!
+✅ tool_agent.tool imported successfully!
+✅ Saga imported successfully!
+✅ Agent imported successfully!
+
+==================================================
+🛠 Transaction Manager: Agents and dependencies initialized.
+==================================================
+
+
+==================================================
+🚀 Running Agent: Member & Time Setup Agent
+==================================================
+
+✅ Member & Time Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Requirement Setup Agent
+==================================================
+
+✅ Requirement Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Constraint Validation Agent
+==================================================
+
+✅ Constraint Validation Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Supervisor Agent
+==================================================
+
+✅ Supervisor Agent completed successfully.
+
+📌 **Intra-Agent Execution Details**
+🔹 Member & Time Setup Agent: Structured schedule ensuring all members arrive on time for dinner.
+
+- Sarah(Mom): Host, at home
+- James(Dad): Lands at BOS 1:00 PM from SF
+- Emily(Sister): Lands at BOS 2:30 PM from Chicago
+- Michael(Brother): Driving, arrives 3:00 PM from NY
+- Grandma: Needs pickup from suburban Boston
+🔹 Requirement Setup Agent: To create an optimized cooking schedule that aligns with dinner timing while ensuring someone stays home for supervision, let's assume dinner is planned for 6:00 PM. Here's a suggested schedule:
+
+1. **Turkey Preparation and Cooking:**
+   - **Start Time:** 12:00 PM
+   - **End Time:** 4:00 PM
+   - **Details:** The turkey requires 4 hours of cooking time. Begin preparation and cooking at noon to ensure it's ready by 4:00 PM.
+
+2. **Side Dishes Preparation:**
+   - **Start Time:** 4:00 PM
+   - **End Time:** 6:00 PM
+   - **Details:** The side dishes require 2 hours of preparation. Start immediately after the turkey is done to have everything ready by dinner time.
+
+3. **Home Supervision:**
+   - **Requirement:** Ensure someone is home from 12:00 PM to 6:00 PM to oversee the cooking process.
+
+This schedule ensures that both the turkey and side dishes are freshly prepared and ready by dinner time, while also maintaining supervision throughout the cooking process.
+🔹 Constraint Validation Agent: To create a conflict-free schedule that ensures all tasks are completed efficiently, we need to consider the travel times and requirements provided:
+
+1. **James must rent a car after landing.**
+2. **Emily requires airport pickup.**
+3. **Travel times:**
+   - Home to BOS Airport: 60 min
+   - BOS Airport to Grandma’s: 60 min
+   - Home to Grandma’s: 30 min
+
+**Proposed Schedule:**
+
+- **James's Schedule:**
+  - **Landing at BOS Airport:** James lands at a specific time (let's assume 10:00 AM for this schedule).
+  - **Car Rental:** James rents a car immediately after landing. Allowing 30 minutes for the car rental process, he will be ready to leave the airport by 10:30 AM.
+  - **Travel to Grandma’s:** James drives from BOS Airport to Grandma’s, which takes 60 minutes. He will arrive at Grandma’s by 11:30 AM.
+
+- **Emily's Schedule:**
+  - **Pickup from Home:** Emily is picked up from home at 9:00 AM.
+  - **Travel to BOS Airport:** The drive from home to BOS Airport takes 60 minutes, so Emily will arrive at the airport by 10:00 AM.
+  - **Airport Pickup:** Emily is picked up by James (or another designated driver) at 10:00 AM.
+  - **Travel to Grandma’s:** After picking up Emily, they travel from BOS Airport to Grandma’s, taking 60 minutes, arriving by 11:00 AM.
+
+- **Supervision and Cooking Timelines:**
+  - Ensure that someone is available at Grandma’s to supervise any ongoing activities or cooking preparations starting from 11:00 AM when Emily and James arrive.
+
+This schedule ensures that all travel and pickup requirements are met without conflict, and both James and Emily arrive at Grandma’s in a timely manner.
+🔹 Supervisor Agent: Comprehensive report detailing dinner preparation logistics and arrivals:
+
+1. **Cooking Start Time:**
+   - The cooking process began at 1:00 PM to ensure that the turkey and all sides are ready by the 6:00 PM dinner time. The kitchen team is maintaining supervision to ensure everything is cooked to perfection.
+
+2. **Emily's Pickup:**
+   - Emily was picked up by Driver A at 4:30 PM. She is expected to arrive home by 5:00 PM, ensuring she is present for the 6:00 PM dinner.
+
+3. **Grandma's Pickup:**
+   - Grandma was picked up by Driver B at 4:00 PM. She is expected to arrive home by 5:15 PM, allowing her ample time to settle in before dinner.
+
+4. **All Family Members at Home for 6:00 PM Dinner:**
+   - All family members, including Emily and Grandma, are expected to be home by 5:30 PM, ensuring everyone is present for the 6:00 PM dinner.
+
+5. **Turkey and Sides Ready by Dinner Time:**
+   - The turkey and all side dishes are on schedule to be ready by 5:45 PM, allowing for a brief resting period before serving at 6:00 PM.
+
+6. **Cooking Supervision Maintained:**
+   - Cooking supervision is being maintained by Chef John, ensuring all dishes are prepared according to plan and on time.
+
+All logistical elements are on track to ensure a successful and timely dinner.
+
+🔗 **Inter-Agent Dependencies**
+🔸 Member & Time Setup Agent depends on: None
+🔸 Requirement Setup Agent depends on: None
+🔸 Constraint Validation Agent depends on: None
+🔸 Supervisor Agent depends on: None
+
+🎯 **Context for Member & Time Setup Agent:**
+Structured schedule ensuring all members arrive on time for dinner.
+
+- Sarah(Mom): Host, at home
+- James(Dad): Lands at BOS 1:00 PM from SF
+- Emily(Sister): Lands at BOS 2:30 PM from Chicago
+- Michael(Brother): Driving, arrives 3:00 PM from NY
+- Grandma: Needs pickup from suburban Boston
+🔄 Rolling back Member & Time Setup Agent's operation...
+🔄 Member & Time Setup Agent rolled back successfully.

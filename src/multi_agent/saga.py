@@ -1,86 +1,141 @@
 from collections import deque
-
 from colorama import Fore
 from graphviz import Digraph  # type: ignore
+# from src.utils.logging import custom_print
 
-from src.utils.logging import custom_print
+import sys
+import os
 
+# Get the project root by going up one level from 'applications'
+project_root = os.path.abspath(os.path.join(os.getcwd(), '..'))
+print(f"📂 Project Root: {project_root}")
+
+# Append 'src' directory to sys.path
+src_path = os.path.join(project_root, 'src')
+sys.path.append(src_path)
+
+# Print sys.path to verify
+print("🔍 Updated sys.path:")
+for path in sys.path:
+    print(path)
+
+# Try importing Saga again
+try:
+    from utils.logging import custom_print
+    print("✅ Utils imported successfully!")
+except ModuleNotFoundError as e:
+    print("❌ Import failed:", e)
 
 class Saga:
     """
-    A class representing a crew of agents working together.
+    Saga framework managing transaction flows, inter-agent dependencies, and rollback mechanisms.
 
-    This class manages a group of agents, their dependencies, and provides methods
-    for running the agents in a topologically sorted order.
+    Key Functions:
+    1) `transaction_manager` - Initializes agents, sets dependencies.
+    2) `saga_coordinator` - Runs agents with or without rollback.
+    3) `intra_agent` - Prints intra-agent details.
+    4) `inter_agent` - Prints inter-agent relationships.
+    5) `select_context` - User input node and context display.
+    6) `restore_context` - Rolls back a selected node.
 
     Attributes:
-        current_crew (Crew): Class-level variable to track the active Crew context.
-        agents (list): A list of agents in the crew.
+        agents (list): List of all registered agents.
+        context (dict): Stores execution context per agent.
     """
-
-    current_crew = None
 
     def __init__(self):
         self.agents = []
-        self.rollback_stack = deque()  # Stack to track completed agents for rollback
+        self.context = {}  # Stores execution results for rollback and context tracking
 
-
-    def __enter__(self):
+    def transaction_manager(self, agents):
         """
-        Enters the context manager, setting this crew as the current active context.
-
-        Returns:
-            Crew: The current Crew instance.
+        Defines the transaction context, initializes agents, and sets dependencies.
         """
-        Crew.current_crew = self
-        return self
+        self.agents = agents
+        custom_print("🛠 Transaction Manager: Agents and dependencies initialized.")
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def saga_coordinator(self, with_rollback=True):
         """
-        Exits the context manager, clearing the active context.
+        Runs all agents in topological order with optional rollback on failure.
+        """
+        sorted_agents = self.topological_sort()
+        executed_agents = []
 
-        Args:
-            exc_type: The exception type, if an exception was raised.
-            exc_val: The exception value, if an exception was raised.
-            exc_tb: The traceback, if an exception was raised.
-        """
-        Crew.current_crew = None
+        try:
+            for agent in sorted_agents:
+                custom_print(f"🚀 Running Agent: {agent.name}")
+                result = agent.run()
+                self.context[agent.name] = result  # Store execution context
+                executed_agents.append(agent)
+                print(Fore.GREEN + f"✅ {agent.name} completed successfully.")
 
-    def add_agent(self, agent):
-        """
-        Adds an agent to the crew.
+        except Exception as e:
+            print(Fore.RED + f"❌ ERROR in {agent.name}: {str(e)}")
 
-        Args:
-            agent: The agent to be added to the crew.
-        """
-        self.agents.append(agent)
+            if with_rollback:
+                print(Fore.YELLOW + "🔄 Rolling back executed agents...")
+                for completed_agent in reversed(executed_agents):
+                    try:
+                        completed_agent.rollback()
+                        print(Fore.BLUE + f"↩️ Rolled back: {completed_agent.name}")
+                    except AttributeError:
+                        print(Fore.RED + f"⚠️ {completed_agent.name} has no rollback method.")
+                    except Exception as rollback_error:
+                        print(Fore.RED + f"⚠️ Error rolling back {completed_agent.name}: {rollback_error}")
 
-    @staticmethod
-    def register_agent(agent):
-        """
-        Registers an agent with the current active crew context.
+            print(Fore.RED + "🚨 Execution halted due to error.")
 
-        Args:
-            agent: The agent to be registered.
+    def intra_agent(self):
         """
-        if Crew.current_crew is not None:
-            Crew.current_crew.add_agent(agent)
+        Prints details of each agent’s individual execution.
+        """
+        print("\n📌 **Intra-Agent Execution Details**")
+        for agent in self.agents:
+            print(f"🔹 {agent.name}: {self.context.get(agent.name, 'Not executed')}")
+
+    def inter_agent(self):
+        """
+        Prints agent relationships and dependencies.
+        """
+        print("\n🔗 **Inter-Agent Dependencies**")
+        for agent in self.agents:
+            dep_names = [dep.name for dep in agent.dependencies]
+            print(f"🔸 {agent.name} depends on: {', '.join(dep_names) if dep_names else 'None'}")
+
+    def select_context(self, node_name):
+        """
+        Allows the user to specify a node and retrieves its execution context.
+        """
+        if node_name in self.context:
+            print(f"\n🎯 **Context for {node_name}:**\n{self.context[node_name]}")
+        else:
+            print(Fore.RED + f"⚠️ No execution context found for {node_name}.")
+
+    def restore_context(self, node_name):
+        """
+        Rolls back the specified agent and restores its previous state.
+        """
+        agent = next((a for a in self.agents if a.name == node_name), None)
+        if agent:
+            try:
+                agent.rollback()
+                del self.context[node_name]  # Remove from execution context
+                print(Fore.BLUE + f"🔄 {node_name} rolled back successfully.")
+            except AttributeError:
+                print(Fore.RED + f"⚠️ {node_name} has no rollback method.")
+            except Exception as e:
+                print(Fore.RED + f"⚠️ Error during rollback of {node_name}: {e}")
+        else:
+            print(Fore.RED + f"⚠️ Agent {node_name} not found.")
 
     def topological_sort(self):
         """
-        Performs a topological sort of the agents based on their dependencies.
-
-        Returns:
-            list: A list of agents sorted in topological order.
-
-        Raises:
-            ValueError: If there's a circular dependency among the agents.
+        Sorts agents in topological order based on dependencies.
         """
         in_degree = {agent: len(agent.dependencies) for agent in self.agents}
         queue = deque([agent for agent in self.agents if in_degree[agent] == 0])
 
         sorted_agents = []
-
         while queue:
             current_agent = queue.popleft()
             sorted_agents.append(current_agent)
@@ -91,61 +146,6 @@ class Saga:
                     queue.append(dependent)
 
         if len(sorted_agents) != len(self.agents):
-            raise ValueError(
-                "Circular dependencies detected among agents, preventing a valid topological sort"
-            )
+            raise ValueError("Circular dependencies detected, preventing execution order.")
 
         return sorted_agents
-
-    def plot(self):
-        """
-        Plots the Directed Acyclic Graph (DAG) of agents in the crew using Graphviz.
-
-        Returns:
-            Digraph: A Graphviz Digraph object representing the agent dependencies.
-        """
-        dot = Digraph(format="png")  # Set format to PNG for inline display
-
-        # Add nodes and edges for each agent in the crew
-        for agent in self.agents:
-            dot.node(agent.name)
-            for dependency in agent.dependencies:
-                dot.edge(dependency.name, agent.name)
-        return dot
-
-    def rollback(self):
-        """Performs rollback for executed agents in reverse order."""
-        print("\n🔄 Rolling back due to failure...\n")
-        while self.rollback_stack:
-            agent = self.rollback_stack.pop()
-            try:
-                custom_print(f"ROLLBACK AGENT: {agent.name}")
-                agent.rollback()  # Call rollback method for each completed agent
-            except Exception as e:
-                print(Fore.YELLOW + f"⚠️ Rollback failed for {agent.name}: {e}")
-
-        print(Fore.GREEN + "✅ Rollback complete.")
-
-    def run(self, with_rollback=True):
-        """
-        Runs agents in topological order, with optional rollback on failure.
-
-        Args:
-            with_rollback (bool): If True, performs rollback on failure; otherwise, skips rollback.
-        """
-        sorted_agents = self.topological_sort()
-
-        try:
-            for agent in sorted_agents:
-                custom_print(f"RUNNING AGENT: {agent}")
-                print(Fore.RED + f"{agent.run()}")
-                self.rollback_stack.append(agent)  # Store executed agent for rollback
-
-            print(Fore.GREEN + "🎉 All agents completed successfully!")
-
-        except Exception as e:
-            print(Fore.RED + f"❌ Error encountered: {e}")
-            if with_rollback:
-                self.rollback()
-            else:
-                print(Fore.YELLOW + "⚠️ Rollback disabled. Keeping executed state intact.")
