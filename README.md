@@ -1,5 +1,11 @@
 
 # **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning**
+
+```
+What if LLM and Agent lost track of information? Reverting back as a transaction!
+
+--- SagaLLM Authors
+```
 <p align="center">
   ⬇️ <a href="https://github.com/genglongling/REALM-Bench?tab=readme-ov-file">Github</a>  
   📃 <a href="https://arxiv.org/abs/2502.18836">Paper</a>  
@@ -27,7 +33,14 @@ The SagaLLM provides a **comprehensive middleware** for agent application layer 
    - **LangGraph**  
 
 ---
-## **Key Functions of Saga Framework**  
+## **Key Functions of `Saga` libraries**
+
+- 1) Context Management Framework
+- 2) Validation Framework
+- 3) Transaction Framework
+- 4) Extension of multi-agent frameworks,
+- 5) Built for application layers.
+     
 
 | **Function**            | **Description**                                      | **Function Name**                      | **Input**                                      |
 |-------------------------|------------------------------------------------------|-----------------------------------------|------------------------------------------------|
@@ -38,6 +51,7 @@ The SagaLLM provides a **comprehensive middleware** for agent application layer 
 | **Select Context**      | Allows user to query execution context of a node.   | `select_context(self, node_name)`       | User-input node name.                         |
 | **Restore Context**     | Rolls back execution of a specified agent.          | `restore_context(self, agent_name)`     | User-input agent to rollback.                |
 
+![SagaLLM Functions](img/saga_functions.png)
 ---
 
 ## **🔹 Key Features of Using `SagaCoordinator` Instead of Previous `Crew`**
@@ -50,15 +64,6 @@ The SagaLLM provides a **comprehensive middleware** for agent application layer 
 | **Use Case**        | Dependency management                     | Resilient transaction flow          |
 
 ---
-## **Key Functions of `Saga` libraries**
-
-- 1) Context Management Framework
-- 2) Validation Framework
-- 3) Transaction Framework
-- 4) Extension of multi-agent frameworks,
-- 5) Built for application layers.
-     
-![SagaLLM Functions](img/saga_functions.png)
 
 ## **🚀 How To Run**  
 
@@ -108,6 +113,17 @@ Follow these steps to get started:
 - **Using AutoGen**  
   - Ensure **Docker** is installed ([Get Docker](https://docs.docker.com/get-started/get-docker/))  
   - Start Docker before running AutoGen-based agents  
+
+---
+### **3️⃣ Import Saga Library**
+(Optional) You can execute transaction using sage:  
+
+
+  ```
+  cd applications
+  ```
+
+and edit the "multiagent-p5.py" following the below coding format.
 
 --- 
 ## **Example 1: Wedding Logsitics Planning**
@@ -785,7 +801,7 @@ Structured schedule ensuring all members arrive on time for dinner.
 ## ✅ Final Thoughts
 
 - If everything **succeeds**, all agents complete. ✅ 
-- If any **agent fails**, all completed agents **roll back automatically**.  ✅ 
+- If any **agent fails**, all completed agents **roll back automatically, or by inputing a specific node**.  ✅ 
 - Ensures **multi-agent consistency** in real-world applications (e.g., **stock trading, planning, scheduling, transaction, or payments**).  ✅ 
 
 ---
