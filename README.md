@@ -737,7 +737,7 @@ Structured schedule ensuring all members arrive on time for dinner.
 
 ```
 --- 
-## **Example 3: Wedding Logistics Planning With Discruption**
+## **Example 3: Wedding Logistics Planning With Disruption**
 
 Input for example 3:
 ```
@@ -1079,7 +1079,7 @@ Optimized 5 vehicle allocation and friend welcome ensuring timely arrivals. - On
 ```
 
 --- 
-## **Example 4: Thanksgiving Dinner Planning With Discruption**
+## **Example 4: Thanksgiving Dinner Planning With Disruption**
 Input for example 4:
 ```
 # Initialize Saga
