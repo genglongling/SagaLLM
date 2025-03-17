@@ -95,11 +95,6 @@ Follow these steps to get started:
     ```env
     OPENAI_API_KEY="sk-proj-..."
     ```  
-- **Run Jupyter Notebook**  
-  ```bash
-  jupyter notebook
-  ```  
-  - Open and modify `design_patterns/multiagent.ipynb` to create your **specialized multi-agent use case**.  
 
 ---
 
@@ -121,6 +116,12 @@ You can execute transaction using sage:
 
   ```
   cd applications
+  python3 multiagent-p5.py
+  python3 multiagent-p6.py
+  python3 multiagent-p8.py
+  python3 multiagent-p9.py
+
+
   ```
 
 and edit the "multiagent-p5.py" following the below coding format.
