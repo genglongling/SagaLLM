@@ -116,7 +116,7 @@ Follow these steps to get started:
 
 ---
 ### **3️⃣ Import Saga Library**
-(Optional) You can execute transaction using sage:  
+You can execute transaction using sage:  
 
 
   ```
