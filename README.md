@@ -621,68 +621,6 @@ output for example 2:
 🛠 Transaction Manager: Agents and dependencies initialized.
 ==================================================
 
-Traceback (most recent call last):
-  File "/Users/glin/Documents/GitHub/SagaLLM/applications/multiagent-p6.py", line 71, in <module>
-    saga.saga_coordinator(with_rollback=True)
-  File "/Users/glin/Documents/GitHub/SagaLLM/src/multi_agent/saga.py", line 61, in saga_coordinator
-    sorted_agents = self.topological_sort()
-  File "/Users/glin/Documents/GitHub/SagaLLM/src/multi_agent/saga.py", line 144, in topological_sort
-    in_degree[dependent] -= 1
-KeyError: Constraint Validation Agent
-(venv) (base) glin@glindeMacBook-Pro applications % python3 multiagent-p6.py
-📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
-🔍 Updated sys.path:
-/Users/glin/Documents/GitHub/SagaLLM/applications
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
-/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
-/Users/glin/Documents/GitHub/SagaLLM/src
-📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
-🔍 Updated sys.path:
-/Users/glin/Documents/GitHub/SagaLLM/applications
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
-/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
-/Users/glin/Documents/GitHub/SagaLLM/src
-/Users/glin/Documents/GitHub/SagaLLM/src
-✅ Utils imported successfully!
-📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
-🔍 Updated sys.path:
-/Users/glin/Documents/GitHub/SagaLLM/applications
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
-/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
-/Users/glin/Documents/GitHub/SagaLLM/src
-/Users/glin/Documents/GitHub/SagaLLM/src
-/Users/glin/Documents/GitHub/SagaLLM/src
-✅ utils.logging imported successfully!
-📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM
-🔍 Updated sys.path:
-/Users/glin/Documents/GitHub/SagaLLM/applications
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
-/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
-/Users/glin/Documents/GitHub/SagaLLM/venv/lib/python3.10/site-packages
-/Users/glin/Documents/GitHub/SagaLLM/src
-/Users/glin/Documents/GitHub/SagaLLM/src
-/Users/glin/Documents/GitHub/SagaLLM/src
-/Users/glin/Documents/GitHub/SagaLLM/src
-✅ tool_agent.tool imported successfully!
-✅ utils.completions imported successfully!
-✅ utils.extraction imported successfully!
-✅ multi_agent.crew imported successfully!
-✅ planning_agent.react_agent imported successfully!
-✅ tool_agent.tool imported successfully!
-✅ Saga imported successfully!
-✅ Agent imported successfully!
-
-==================================================
-🛠 Transaction Manager: Agents and dependencies initialized.
-==================================================
-
 
 ==================================================
 🚀 Running Agent: Member & Time Setup Agent
@@ -798,7 +736,9 @@ Structured schedule ensuring all members arrive on time for dinner.
 🔄 Member & Time Setup Agent rolled back successfully.
 
 ```
---- **Example 3: Wedding Logistics Planning With Discruption**
+--- 
+## **Example 3: Wedding Logistics Planning With Discruption**
+
 Input for example 3:
 ```
 # Initialize Saga
@@ -1138,7 +1078,8 @@ Optimized 5 vehicle allocation and friend welcome ensuring timely arrivals. - On
 
 ```
 
---- **Example 4: Thanksgiving Dinner Planning With Discruption**
+--- 
+## **Example 4: Thanksgiving Dinner Planning With Discruption**
 Input for example 4:
 ```
 # Initialize Saga
