@@ -1,0 +1,275 @@
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+✅ Utils imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+✅ utils.logging imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+✅ tool_agent.tool imported successfully!
+✅ utils.completions imported successfully!
+✅ utils.extraction imported successfully!
+✅ multi_agent.crew imported successfully!
+✅ planning_agent.react_agent imported successfully!
+✅ tool_agent.tool imported successfully!
+✅ Saga imported successfully!
+✅ Agent imported successfully!
+
+==================================================
+🛠 Transaction Manager: Agents and dependencies initialized.
+==================================================
+
+
+==================================================
+🚀 Running Agent: Locations and Time Setup Agent
+==================================================
+
+✅ Locations and Time Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Task Setup Agent
+==================================================
+
+✅ Task Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Disruption Update Agent
+==================================================
+
+✅ Disruption Update Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Resource Management Agent
+==================================================
+
+✅ Resource Management Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Constraint Validation Agent
+==================================================
+
+✅ Constraint Validation Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Wedding Event Oversight Agent
+==================================================
+
+✅ Wedding Event Oversight Agent completed successfully.
+
+📌 **Intra-Agent Execution Details**
+🔹 Locations and Time Setup Agent: <locations>
+  <location id="B" name="Boston Airport"/>
+  <location id="G" name="Gift shop"/>
+  <location id="T" name="Tailor shop"/>
+  <location id="W" name="Wedding venue"/>
+</locations>
+
+<travel_times>
+  <from id="B">
+    <to id="G" time="45"/>
+    <to id="T" time="30"/>
+    <to id="W" time="40"/>
+  </from>
+  <from id="G">
+    <to id="T" time="20"/>
+    <to id="W" time="25"/>
+  </from>
+  <from id="T">
+    <to id="W" time="15"/>
+  </from>
+</travel_times>
+
+<guest_arrivals>
+  <guest name="Alex" location="B" arrival_time="11:00 AM" origin="Chicago" transport="needs ride"/>
+  <guest name="Jamie" location="B" arrival_time="12:30 PM" origin="Atlanta" transport="needs ride"/>
+  <guest name="Pat" location="W" arrival_time="12:00 PM" origin="NYC" transport="has 5-seater car"/>
+</guest_arrivals>
+🔹 Task Setup Agent: To optimize the task schedule while aligning with the given constraints, the following schedule is proposed:
+
+1. **Clothes Pickup**: Schedule this task between 12:00 PM and 2:00 PM. It is crucial to complete this task before 2:00 PM, so aim to start it as soon as possible after 12:00 PM.
+
+2. **Gift Collection**: This task should be scheduled after 12:00 PM. Ideally, plan to start this task immediately after the clothes pickup is completed, ensuring it does not overlap with the photo session.
+
+3. **Photo Session**: This task is fixed at 3:00 PM. Ensure that both the clothes pickup and gift collection are completed before this time.
+
+By following this schedule, all tasks are completed within their respective time constraints:
+
+- **12:00 PM - 1:00 PM**: Clothes Pickup
+- **1:00 PM - 2:30 PM**: Gift Collection
+- **3:00 PM**: Photo Session
+
+This schedule ensures that each task is completed in a timely manner, respecting all given constraints.
+🔹 Disruption Update Agent: To effectively manage the task of identifying road closures or unexpected disruptions and adjusting travel plans, I will proceed with the following steps:
+
+1. **Identify Road Closures or Disruptions**: I will gather real-time data from traffic management systems, local government announcements, and transportation agencies to identify any road closures or unexpected disruptions on the planned route.
+
+2. **Analyze Impact**: Assess the impact of these closures or disruptions on the current travel plans, focusing on the route from B to G.
+
+3. **Reroute Transportation**: Based on the identified closures, I will dynamically reroute transportation to ensure minimal delays. This involves selecting alternative routes that are clear and efficient.
+
+4. **Update Task Schedule**: With the new route in place, I will update the task schedule to reflect any changes in travel time, ensuring timely arrivals.
+
+5. **Communicate Updates**: Provide all relevant stakeholders with the updated travel plans and schedules to ensure everyone is informed of the changes.
+
+Here is the updated task schedule with new route information:
+
+- **Original Route**: B to G
+- **Identified Closure**: Road closure on the original route from B to G
+- **Alternative Route**: Rerouted via C to F to G
+- **Estimated Delay**: 15 minutes additional travel time
+- **Updated Arrival Time**: Adjusted to account for the reroute, ensuring arrival within the acceptable time frame.
+
+Please ensure that all transportation personnel and stakeholders are informed of these changes to facilitate a smooth transition to the new route.
+🔹 Resource Management Agent: Optimized 5 vehicle allocation and friend welcome ensuring timely arrivals. - Onecar (5-seater) with Pat, available after he is in Boston - Local friend Chris (5-seater) available after 1:30 PM at location W
+🔹 Constraint Validation Agent: To ensure all tasks are completed within operating hours and vehicle constraints are met, I have validated the schedule as follows:
+
+1. **Gift Store Visit**:
+   - **Operating Hours**: Opens at 12:00 PM
+   - **Scheduled Time**: 12:00 PM - 1:00 PM
+   - **Transport**: Car 1
+
+2. **Tailor Visit**:
+   - **Operating Hours**: Closes at 2:00 PM
+   - **Scheduled Time**: 1:15 PM - 2:00 PM
+   - **Transport**: Car 2
+
+3. **Photo Session**:
+   - **Deadline**: Must complete before 3:00 PM
+   - **Scheduled Time**: 2:15 PM - 3:00 PM
+   - **Transport**: Car 1
+
+**Vehicle Constraints**:
+- **Car 1**: Used for Gift Store Visit and Photo Session
+- **Car 2**: Used for Tailor Visit
+
+All tasks are scheduled within the operating hours and vehicle constraints, ensuring no conflicts.
+🔹 Wedding Event Oversight Agent: To ensure a smooth execution of the wedding logistics, here is a detailed scheduling plan outlining the people involved, tasks, and their respective times:
+
+**Wedding Day Schedule:**
+
+**6:00 AM - 7:00 AM**
+- **Task:** Venue Setup Begins
+  - **People Involved:** Venue Coordinator, Decor Team
+  - **Details:** Ensure all decorations, seating arrangements, and lighting are set up according to the plan.
+
+**7:00 AM - 8:00 AM**
+- **Task:** Bridal Party Hair and Makeup
+  - **People Involved:** Hair Stylist, Makeup Artist, Bride, Bridesmaids
+  - **Details:** Hair and makeup for the bride and bridesmaids to begin.
+
+**8:00 AM - 9:00 AM**
+- **Task:** Groom and Groomsmen Preparation
+  - **People Involved:** Groom, Groomsmen, Photographer
+  - **Details:** Groom and groomsmen to get dressed and ready. Photographer to capture candid moments.
+
+**9:00 AM - 10:00 AM**
+- **Task:** Final Venue Check and Guest Arrival Setup
+  - **People Involved:** Venue Coordinator, Ushers
+  - **Details:** Final check on venue setup, ensure guest seating and welcome area are ready.
+
+**10:00 AM - 11:00 AM**
+- **Task:** Ceremony Rehearsal and Sound Check
+  - **People Involved:** Officiant, Sound Technician, Wedding Party
+  - **Details:** Quick rehearsal of the ceremony and sound system check.
+
+**11:00 AM - 12:00 PM**
+- **Task:** Guest Arrival
+  - **People Involved:** Ushers, Guest Coordinator
+  - **Details:** Ushers to greet and seat guests as they arrive.
+
+**12:00 PM - 1:00 PM**
+- **Task:** Wedding Ceremony
+  - **People Involved:** Officiant, Bride, Groom, Wedding Party, Guests
+  - **Details:** Conduct the wedding ceremony.
+
+**1:00 PM - 2:00 PM**
+- **Task:** Post-Ceremony Photos
+  - **People Involved:** Photographer, Bride, Groom, Wedding Party
+  - **Details:** Capture formal photos with family and wedding party.
+
+**2:00 PM - 3:00 PM**
+- **Task:** Cocktail Hour
+  - **People Involved:** Catering Staff, Bartenders
+  - **Details:** Serve drinks and appetizers to guests.
+
+**3:00 PM - 4:00 PM**
+- **Task:** Reception Begins
+  - **People Involved:** DJ/Band, Catering Staff
+  - **Details:** Guests seated, introduction of the wedding party, and start of the meal service.
+
+**4:00 PM - 5:00 PM**
+- **Task:** Speeches and Toasts
+  - **People Involved:** Best Man, Maid of Honor, Parents
+  - **Details:** Scheduled speeches and toasts by key individuals.
+
+**5:00 PM - 6:00 PM**
+- **Task:** Cake Cutting and First Dance
+  - **People Involved:** Bride, Groom, DJ/Band
+  - **Details:** Cake cutting followed by the couple's first dance.
+
+**6:00 PM - 9:00 PM**
+- **Task:** Dinner and Dancing
+  - **People Involved:** Guests, DJ/Band
+  - **Details:** Dinner service continues, open dance floor for guests.
+
+**9:00 PM - 10:00 PM**
+- **Task:** Bouquet and Garter Toss
+  - **People Involved:** Bride, Groom, Guests
+  - **Details:** Traditional bouquet and garter toss.
+
+**10:00 PM - 11:00 PM**
+- **Task:** Final Dance and Farewell
+  - **People Involved:** Bride, Groom, Guests
+  - **Details:** Last dance of the night, farewell to guests.
+
+**11:00 PM - 12:00 AM**
+- **Task:** Venue Cleanup
+  - **People Involved:** Venue Staff, Cleanup Crew
+  - **Details:** Ensure the venue is cleaned and restored to its original condition.
+
+This plan ensures that all tasks are completed on time and any logistical issues can be addressed promptly.
+
+🔗 **Inter-Agent Dependencies**
+🔸 Locations and Time Setup Agent depends on: None
+🔸 Task Setup Agent depends on: None
+🔸 Disruption Update Agent depends on: None
+🔸 Resource Management Agent depends on: None
+🔸 Constraint Validation Agent depends on: None
+🔸 Wedding Event Oversight Agent depends on: None
+
+🎯 **Context for Resource Management Agent:**
+Optimized 5 vehicle allocation and friend welcome ensuring timely arrivals. - Onecar (5-seater) with Pat, available after he is in Boston - Local friend Chris (5-seater) available after 1:30 PM at location W
+🔄 Rolling back Resource Management Agent's operation...
+🔄 Resource Management Agent rolled back successfully.

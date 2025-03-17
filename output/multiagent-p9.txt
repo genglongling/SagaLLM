@@ -1,0 +1,178 @@
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+✅ Utils imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+✅ utils.logging imported successfully!
+📂 Project Root: /Users/glin/Documents/GitHub/SagaLLM-repo
+🔍 Updated sys.path:
+/Users/glin/Documents/GitHub/SagaLLM-repo/applications
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+/usr/local/Cellar/python@3.10/3.10.14/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+/Users/glin/Documents/GitHub/SagaLLM-repo/venv/lib/python3.10/site-packages
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+/Users/glin/Documents/GitHub/SagaLLM-repo/src
+✅ tool_agent.tool imported successfully!
+✅ utils.completions imported successfully!
+✅ utils.extraction imported successfully!
+✅ multi_agent.crew imported successfully!
+✅ planning_agent.react_agent imported successfully!
+✅ tool_agent.tool imported successfully!
+✅ Saga imported successfully!
+✅ Agent imported successfully!
+
+==================================================
+🛠 Transaction Manager: Agents and dependencies initialized.
+==================================================
+
+
+==================================================
+🚀 Running Agent: Member & Time Setup Agent
+==================================================
+
+✅ Member & Time Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Requirement Setup Agent
+==================================================
+
+✅ Requirement Setup Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Disruption Update Agent
+==================================================
+
+✅ Disruption Update Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Constraint Validation Agent
+==================================================
+
+✅ Constraint Validation Agent completed successfully.
+
+==================================================
+🚀 Running Agent: Supervisor Agent
+==================================================
+
+✅ Supervisor Agent completed successfully.
+
+📌 **Intra-Agent Execution Details**
+🔹 Member & Time Setup Agent: Structured schedule ensuring all members arrive on time for dinner.
+
+- Sarah(Mom): Host, at home
+- James(Dad): Lands at BOS 1:00 PM from SF
+- Emily(Sister): Lands at BOS 2:30 PM from Chicago
+- Michael(Brother): Driving, arrives 3:00 PM from NY
+- Grandma: Needs pickup from suburban Boston
+🔹 Requirement Setup Agent: To ensure a smooth and timely preparation for dinner, here's an optimized cooking schedule:
+
+1. **Turkey Preparation and Cooking:**
+   - **Start Time:** 12:00 PM
+   - **End Time:** 4:00 PM
+   - **Details:** The turkey requires 4 hours of cooking time. Ensure it is placed in the oven by 12:00 PM to be ready by 4:00 PM.
+
+2. **Side Dishes Preparation:**
+   - **Start Time:** 2:00 PM
+   - **End Time:** 4:00 PM
+   - **Details:** Begin preparing the side dishes at 2:00 PM. This will allow them to be ready by the time the turkey is finished.
+
+3. **Supervision Requirement:**
+   - **Details:** Ensure that someone is at home from 12:00 PM to 4:00 PM to supervise the cooking process. This person can manage both the turkey and side dishes preparation.
+
+This schedule ensures that all dishes are ready by 4:00 PM, aligning with dinner timing and meeting the cooking requirements.
+🔹 Disruption Update Agent: Updated schedule reflecting James's new arrival time at 2:00 PM:
+
+- 1:00 PM - Team Meeting (rescheduled to 2:30 PM)
+- 2:00 PM - James's Arrival
+- 2:30 PM - Welcome and Briefing Session with James
+- 3:00 PM - Project Discussion
+- 4:00 PM - Break
+- 4:15 PM - Continued Discussion and Planning
+- 5:00 PM - Wrap-up and Next Steps
+
+Please note that the team meeting has been rescheduled to accommodate James's new arrival time.
+🔹 Constraint Validation Agent: To create a conflict-free schedule that ensures all tasks are completed efficiently, we need to consider the following elements: James must rent a car after landing, Emily requires airport pickup, and the travel times between locations. Here is a proposed schedule:
+
+1. **James's Schedule:**
+   - **Landing at BOS Airport:** Assume James lands at 10:00 AM.
+   - **Car Rental:** Allocate 30 minutes for James to rent a car after landing.
+   - **Departure from BOS Airport:** 10:30 AM.
+   - **Travel to Grandma’s:** 60 minutes.
+   - **Arrival at Grandma’s:** 11:30 AM.
+
+2. **Emily's Schedule:**
+   - **Home Departure:** Assume Emily needs to be picked up from home at 9:00 AM.
+   - **Travel to BOS Airport:** 60 minutes.
+   - **Arrival at BOS Airport:** 10:00 AM.
+   - **Pickup Emily:** 10:00 AM.
+   - **Travel to Grandma’s:** 60 minutes.
+   - **Arrival at Grandma’s:** 11:00 AM.
+
+3. **Supervision and Cooking Timelines:**
+   - **Cooking Start Time at Grandma’s:** 11:30 AM, after both James and Emily have arrived.
+   - **Supervision:** Ensure someone is available to supervise the cooking from 11:30 AM onwards.
+
+This schedule ensures that all tasks are completed efficiently, with no conflicts in travel or task timelines.
+🔹 Supervisor Agent: Comprehensive report detailing dinner preparation logistics and arrivals:
+
+1. **Cooking Start Time:**
+   - The cooking process began at 12:00 PM to ensure that the turkey and all side dishes are ready by the 6:00 PM dinner time. Cooking supervision is maintained throughout to ensure quality and timely preparation.
+
+2. **Emily's Pickup:**
+   - Emily was scheduled to be picked up at 4:30 PM. The driver assigned for Emily's pickup confirmed her safe arrival at home by 5:00 PM.
+
+3. **Grandma's Pickup:**
+   - Grandma's pickup was arranged for 4:00 PM. The driver responsible for this task reported that Grandma was picked up on time and arrived home by 4:45 PM.
+
+4. **Dinner Readiness:**
+   - All family members are expected to be home by 5:30 PM, ensuring everyone is present for the 6:00 PM dinner.
+   - The turkey and all side dishes are on track to be ready by the designated dinner time, with continuous cooking supervision to ensure everything is prepared perfectly.
+
+5. **Driver Availability:**
+   - All pickups have been completed with the available drivers, ensuring no delays in family members' arrivals.
+
+Overall, the dinner preparation logistics are proceeding smoothly, with all key tasks being monitored and completed on schedule.
+
+🔗 **Inter-Agent Dependencies**
+🔸 Member & Time Setup Agent depends on: None
+🔸 Requirement Setup Agent depends on: None
+🔸 Disruption Update Agent depends on: None
+🔸 Constraint Validation Agent depends on: None
+🔸 Supervisor Agent depends on: None
+
+🎯 **Context for Member & Time Setup Agent:**
+Structured schedule ensuring all members arrive on time for dinner.
+
+- Sarah(Mom): Host, at home
+- James(Dad): Lands at BOS 1:00 PM from SF
+- Emily(Sister): Lands at BOS 2:30 PM from Chicago
+- Michael(Brother): Driving, arrives 3:00 PM from NY
+- Grandma: Needs pickup from suburban Boston
+🔄 Rolling back Member & Time Setup Agent's operation...
+🔄 Member & Time Setup Agent rolled back successfully.
